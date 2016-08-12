@@ -1,0 +1,5 @@
+{% for myimage in site.static_files %}
+{% if myimage.path contains 'gallery/img/' + page.match and myimage.path contains 'JPG' %}
+<img style="max-width: 400px;" title="{{ myimage.path }}" src="{{ myimage.path }}" />
+{% endif %}
+{% endfor %}
